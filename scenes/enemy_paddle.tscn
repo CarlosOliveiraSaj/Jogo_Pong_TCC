@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dktvqm8qromqp"]
+
+[ext_resource type="Script" uid="uid://bpfwxq4w1d1pl" path="res://scripts/EnemyPaddle.cs" id="1_ip5qg"]
+[ext_resource type="Texture2D" uid="uid://dgrurrrsuykuo" path="res://assets/right_pallete.png" id="2_ip5qg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip5qg"]
+size = Vector2(16, 64)
+
+[node name="enemyPaddle" type="CharacterBody2D" unique_id=1961200019]
+motion_mode = 1
+script = ExtResource("1_ip5qg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1256230776]
+scale = Vector2(2, 2)
+texture = ExtResource("2_ip5qg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1169894187]
+shape = SubResource("RectangleShape2D_ip5qg")

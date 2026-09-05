@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://m56hguaqcl8o"]
+
+[ext_resource type="Script" uid="uid://d0fj7dpd2s23g" path="res://scripts/PlayerPaddle.cs" id="1_uktar"]
+[ext_resource type="Texture2D" uid="uid://bjx57emnycysx" path="res://assets/left_pallete.png" id="1_yyijc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uktar"]
+size = Vector2(16, 64)
+
+[node name="playerPaddle" type="CharacterBody2D" unique_id=1961200019]
+position = Vector2(0, -1)
+motion_mode = 1
+script = ExtResource("1_uktar")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1256230776]
+scale = Vector2(2, 2)
+texture = ExtResource("1_yyijc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1169894187]
+shape = SubResource("RectangleShape2D_uktar")
